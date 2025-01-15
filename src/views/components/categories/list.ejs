@@ -1,6 +1,10 @@
 <div class="content">
     <div class="container-fluid">
-        <h4 class="page-title">Danh sách loại sản phẩm</h4>
+        <div class="flex items-center justify-content-between mb-5">
+            <h4 class="page-title mb-0">Danh sách loại sản phẩm</h4>
+            <a href="/categories/create" class="btn btn-primary">Tạo loại sản phẩm</a>
+        </div>
+
         <div class="card">
             <div class="card-body">
                 <table class="table table-head-bg-success">
@@ -10,6 +14,8 @@
                             <th scope="col">Image</th>
                             <th scope="col">Code</th>
                             <th scope="col">Name</th>
+                            <th scope="col">Action</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -27,6 +33,12 @@
                                 <td>
                                     <%=category.name%>
                                 </td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/categories/update/<%= category._id %>">
+                                        Cập nhật
+                                    </a>
+                                </td>
+
                             </tr>
                             <% }); %>
 
